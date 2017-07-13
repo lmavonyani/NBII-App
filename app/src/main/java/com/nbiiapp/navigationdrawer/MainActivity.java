@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (id){
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Home toast updated",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Home toast updated And also BERTIE was Here!!!",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
                         drawerLayout.closeDrawers();
                         break;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
         View header = navigationView.getHeaderView(0);
         TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
-        tv_email.setText("NBII");
+        tv_email.setText("NBII Updated Title");
         //comment
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
