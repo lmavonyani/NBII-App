@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         initNavigationDrawer();
 
     }
-
+//  Just a comment
     public void initNavigationDrawer() {
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
