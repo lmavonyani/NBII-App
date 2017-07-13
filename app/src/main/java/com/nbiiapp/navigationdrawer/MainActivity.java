@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         //let call a fragment here
                         break;
                     case R.id.trash:
-                        Toast.makeText(getApplicationContext(),"Trash toast updated",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Changed made by herobiam",Toast.LENGTH_SHORT).show();
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.logout:
