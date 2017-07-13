@@ -2,12 +2,13 @@ package com.nbiiapp.navigationdrawer;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         Toast.makeText(getApplicationContext(),"Home toast updated And also BERTIE was Here!!!",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
+                        Fragment fragment = new PlusOneFragment();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
+
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.settings:
