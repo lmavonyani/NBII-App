@@ -14,19 +14,6 @@
             android:title="Trash"
             android:icon="@drawable/ic_trash"/>
         <item
-            android:id="@+id/trash2"
-            android:title="New Trash"
-            android:icon="@drawable/ic_trash"/>
-        <item
-            android:id="@+id/trash3"
-            android:title="Additional Trash"
-            android:icon="@drawable/ic_trash"/>
-        <item
-            android:id="@+id/item"
-            android:title="New Item"
-            android:icon="@drawable/ic_trash"/>
-
-        <item
             android:id="@+id/logout"
             android:title="Logout"
             android:icon="@drawable/ic_exit"/>
