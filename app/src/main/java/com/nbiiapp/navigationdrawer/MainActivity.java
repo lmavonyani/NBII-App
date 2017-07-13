@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void initNavigationDrawer() {
 
+        // initiate Navigation drawer
         NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
