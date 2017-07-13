@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
         tv_email.setText("NBII Updated Title");
         //comment
+        //comment
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
 
