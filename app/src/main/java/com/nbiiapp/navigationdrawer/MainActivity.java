@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (id){
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Home toast updated",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Home toast updated And also BERTIE was Here!!!",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
                         drawerLayout.closeDrawers();
                         break;
