@@ -36,16 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (id){
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Home toast changed",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Home toast updated And also BERTIE was Here!!!",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.settings:
-                        Toast.makeText(getApplicationContext(),"Settings toast changed",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Settings toast updated",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
                         break;
                     case R.id.trash:
-                        Toast.makeText(getApplicationContext(),"Trash toast changed",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Trash toast updated",Toast.LENGTH_SHORT).show();
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.logout:
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
         View header = navigationView.getHeaderView(0);
         TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
-        tv_email.setText("NBII");
+        tv_email.setText("NBII Updated Title");
         //comment
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
