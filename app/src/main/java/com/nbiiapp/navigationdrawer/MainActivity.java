@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 //  Just a comment
     public void initNavigationDrawer() {
 
+        // initiate Navigation drawer
         NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
         tv_email.setText("NBII Updated Title");
         //comment
+        //comment
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
 
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         };
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
     }
 
 }
