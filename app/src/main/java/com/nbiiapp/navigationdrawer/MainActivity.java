@@ -36,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (id){
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Home",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Home toast",Toast.LENGTH_SHORT).show();
+                        //let call a fragment here
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.settings:
-                        Toast.makeText(getApplicationContext(),"Settings",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Settings toast",Toast.LENGTH_SHORT).show();
+                        //let call a fragment here
                         break;
                     case R.id.trash:
                         Toast.makeText(getApplicationContext(),"Trash",Toast.LENGTH_SHORT).show();
