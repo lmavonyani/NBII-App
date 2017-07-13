@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.settings:
-                        Toast.makeText(getApplicationContext(),"Settings toast updated",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Settings toast changed",Toast.LENGTH_SHORT).show();
                         //let call a fragment here
                         break;
                     case R.id.trash:
-                        Toast.makeText(getApplicationContext(),"Trash toast updated",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Trash toast changed",Toast.LENGTH_SHORT).show();
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.logout:
