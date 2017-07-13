@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //  Just a comment
     public void initNavigationDrawer() {
 
+        // initiate Navigation drawer
         NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         };
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
     }
 
 }
