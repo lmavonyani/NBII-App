@@ -24,18 +24,19 @@ public class MainActivity extends AppCompatActivity {
         initNavigationDrawer();
 
     }
-//  Just a comment
+
+    //  Just a comment
     public void initNavigationDrawer() {
 
         // initiate Navigation drawer
-        NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                 int id = menuItem.getItemId();
 
-                switch (id){
+                switch (id) {
                     case R.id.home:
                         Fragment fragment = new PlusOneFragment();
                         getSupportFragmentManager().beginTransaction()
@@ -52,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.trash:
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.trash2:
+                        Fragment fragmentTrash = new BlankFragment();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, fragmentTrash).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        break;
                     case R.id.logout:
                         finish();
 
@@ -60,17 +67,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         View header = navigationView.getHeaderView(0);
-        TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
+        TextView tv_email = (TextView) header.findViewById(R.id.tv_email);
         tv_email.setText("NBII Updated Title");
         //comment
         //comment
 
-        drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawer_open,R.string.drawer_close){
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
 
             @Override
-            public void onDrawerClosed(View v){
+            public void onDrawerClosed(View v) {
                 super.onDrawerClosed(v);
             }
 
