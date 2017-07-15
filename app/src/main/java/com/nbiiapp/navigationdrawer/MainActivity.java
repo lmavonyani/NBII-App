@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //  Just a comment
+
     public void initNavigationDrawer() {
 
         // initiate Navigation drawer
