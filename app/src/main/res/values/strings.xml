@@ -7,4 +7,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="new_trash_fragment">New Trash Fragment</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+    <string name="text_favorites">News</string>
+    <string name="text_schedules">Events</string>
+    <string name="text_music">Services</string>
+    <string name="text_chat">Chat</string>
 </resources>
