@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -25,33 +24,39 @@ public class MainActivity extends AppCompatActivity {
         initNavigationDrawer();
 
     }
-//  Just a comment
+
+
     public void initNavigationDrawer() {
 
         // initiate Navigation drawer
-        NavigationView navigationView = (NavigationView)findViewById(R.id.navigation_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                 int id = menuItem.getItemId();
 
-                switch (id){
+                switch (id) {
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(),"Home toast updated And also BERTIE was Here!!!",Toast.LENGTH_SHORT).show();
-                        //let call a fragment here
                         Fragment fragment = new PlusOneFragment();
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.fragment_container, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
+                                .replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
 
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.settings:
-                        Toast.makeText(getApplicationContext(),"Settings toast changed",Toast.LENGTH_SHORT).show();
-                        //let call a fragment here
+                        Fragment fragment2 = new BlankFragment();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, fragment2).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.trash:
-                        Toast.makeText(getApplicationContext(),"Trash toast changed",Toast.LENGTH_SHORT).show();
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.trash2:
+                        Fragment fragmentTrash = new BlankFragment();
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, fragmentTrash).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.logout:
@@ -62,17 +67,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         View header = navigationView.getHeaderView(0);
-        TextView tv_email = (TextView)header.findViewById(R.id.tv_email);
+        TextView tv_email = (TextView) header.findViewById(R.id.tv_email);
         tv_email.setText("NBII Updated Title");
         //comment
         //comment
 
-        drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawer_open,R.string.drawer_close){
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
 
             @Override
-            public void onDrawerClosed(View v){
+            public void onDrawerClosed(View v) {
                 super.onDrawerClosed(v);
             }
 
